@@ -1,6 +1,12 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap');
 body{
-  background-color: rebeccapurple;
+  background-color: #e3e3e3;
   font-family: 'Montserrat', sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+.container{
+  padding: 0 40px;
 }

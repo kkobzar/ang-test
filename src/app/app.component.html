@@ -1,5 +1,5 @@
 <app-header *ngIf="apiData" [usersCount]="apiData.length"></app-header>
-<section *ngIf="apiData" id="contacts">
+<section *ngIf="apiData" id="contacts" class="container contact-container">
   <app-contact *ngFor="let user of apiData" [contact]="user"></app-contact>
 </section>
 <!--{{apiData}}-->
