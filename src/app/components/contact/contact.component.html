@@ -1,10 +1,10 @@
 <div data-id="{{contact.id}}" class="contact-item">
   <div class="contact-icon">
-    <img class="contact-icon-img" src="assets/user-ico.svg" alt="User Icon">
+    <img *ngIf="avatar" class="contact-icon-img" src="{{avatar}}" alt="User Icon">
+    <img *ngIf="!avatar" class="contact-icon-img" src="assets/user-ico.svg" alt="User Icon">
     <div class="status" [ngClass]="{'online':contact.isOnline,'offline':!contact.isOnline}"></div>
   </div>
   <h3 class="contact-detail contact-name">{{contact.firstname}} {{contact.lastname}}</h3>
   <p *ngIf="contact.phone" class="contact-detail">tel: {{contact.phone}}</p>
   <p *ngIf="contact.email" class="contact-detail">email: {{contact.email}}</p>
-
 </div>
