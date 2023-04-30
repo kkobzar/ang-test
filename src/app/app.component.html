@@ -2,7 +2,6 @@
 <section *ngIf="apiData" id="contacts" class="container contact-container">
   <app-contact *ngFor="let user of apiData" [contact]="user"></app-contact>
 </section>
-<!--{{apiData}}-->
 <section *ngIf="error" id="error">
   <h1>{{errorMessage}}</h1>
 </section>

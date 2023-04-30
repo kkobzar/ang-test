@@ -6,14 +6,12 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContactComponent,
-    ContactDetailsComponent
+    ContactComponent
   ],
   imports: [
     BrowserModule,
