@@ -6,3 +6,11 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+#error{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+}

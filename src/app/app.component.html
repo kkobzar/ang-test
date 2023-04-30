@@ -3,5 +3,7 @@
   <app-contact *ngFor="let user of apiData" [contact]="user"></app-contact>
 </section>
 <!--{{apiData}}-->
-{{error}}
+<section *ngIf="error" id="error">
+  <h1>{{errorMessage}}</h1>
+</section>
 <router-outlet></router-outlet>

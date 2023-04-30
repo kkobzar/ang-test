@@ -16,7 +16,8 @@ export class AppComponent implements OnInit{
     this._apiData = value;
   }
   title = 'test-task';
-  error: string | undefined;
+  error: boolean = false;
+  errorMessage: string = 'Something gone wrong';
   private _apiData: Contact[];
   constructor(private http: HttpClient) {
   }
@@ -24,11 +25,15 @@ export class AppComponent implements OnInit{
     this.http.get<any>('https://api.crm.xonis.net/api/json/example/task/contactCards?token=f0aef93c624599e8886290dcd85d640bdeb608cf-f8d7a20dd83e63817b3fddc1aac022dd-1682681241')
       .subscribe({
         next: data => {
-          this.apiData = data.contacts
-          console.log(data)
+          if(data.message === "Success"){
+            this.apiData = data.contacts
+          }else {
+            this.error = true
+          }
+          // console.log(data)
         },
         error: e => {
-          this.error = e.message;
+          this.error = true;
           console.error('Ooops...')
           console.error(e)
         }
