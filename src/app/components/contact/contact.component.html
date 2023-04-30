@@ -1,3 +1,10 @@
-<div class="contact">
-  <h3>{{contact.firstname}}</h3>
+<div data-id="{{contact.id}}" class="contact-item">
+  <div class="contact-icon">
+    <img src="assets/user-ico.svg" alt="User Icon">
+    <div class="status" [ngClass]="{'online':contact.isOnline,'offline':!contact.isOnline}"></div>
+  </div>
+  <h3>{{contact.firstname}} {{contact.lastname}}</h3>
+  <p>tel: {{contact.phone}}</p>
+  <p>email: {{contact.email}}</p>
+
 </div>

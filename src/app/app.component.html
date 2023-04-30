@@ -1,5 +1,7 @@
-<app-header [usersCount]="apiData.length"></app-header>
-<app-contact *ngFor="let user of apiData" [contact]="user"></app-contact>
+<app-header *ngIf="apiData" [usersCount]="apiData.length"></app-header>
+<section *ngIf="apiData" id="contacts">
+  <app-contact *ngFor="let user of apiData" [contact]="user"></app-contact>
+</section>
 <!--{{apiData}}-->
 {{error}}
 <router-outlet></router-outlet>
